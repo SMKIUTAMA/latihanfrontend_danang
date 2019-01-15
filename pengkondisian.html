@@ -5,14 +5,24 @@
 </head>
 <body>
 <script type="text/javascript">
-	var jmlanak = 10;
-	var anaklaki = 6;
-	
-	for(var Anak = 1; Anak <= jmlanak ; Anak++){
+var	angka = prompt('masukan angka');
+
+if (angka % 2 === 0 ) {
+	alert(angka + 'adalah angka genap');
+		}else if (angka % 2 === 1){
+			alert(angka + ' adalah angka ganjil');
+		}else{
+			alert(angka + ' Bukan angka!!!');
+		}
+	for(var Anak = 1, jmlanak = 10; Anak <= jmlanak ; Anak++){
 
 		if (Anak <= 6) {
 			console.log('Anak Ke. ' + Anak + ' Ganteng-ganteng');
-		}else{
+		}else if( Anak === 8){
+			console.log('Anak Ke ' + Anak + ' Anak yang Solehah')
+
+		}
+		else{
 			console.log('Anak Ke. ' + Anak + ' Cantik-cantik .');
 		}
 	}

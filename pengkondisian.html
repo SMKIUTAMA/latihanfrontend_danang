@@ -16,13 +16,12 @@ if (angka % 2 === 0 ) {
 		}
 	for(var Anak = 1, jmlanak = 10; Anak <= jmlanak ; Anak++){
 
-		if (Anak <= 6) {
+		if (Anak <= 6 && Anak !== 5) {
 			console.log('Anak Ke. ' + Anak + ' Ganteng-ganteng');
-		}else if( Anak === 8){
-			console.log('Anak Ke ' + Anak + ' Anak yang Solehah')
+		}else if( Anak === 8 || Anak === 10 || Anak === 5){
+			console.log('Anak Ke ' + Anak + ' Anak yang Baik');
 
-		}
-		else{
+		}else{
 			console.log('Anak Ke. ' + Anak + ' Cantik-cantik .');
 		}
 	}

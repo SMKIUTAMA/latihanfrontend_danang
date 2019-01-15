@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java script| suit jawa</title>
+</head>
+<body>
+<script type="text/javascript">
+	//menagkap pilihan player
+	alert('selamat datang di EVILDICE game menyeramkan diasia!');
+	var tanya = true;
+	while(tanya){
+	var d = prompt('masukan pilihan\n orang, gajah, semut');
+	//menangkap pilihan komputer
+	var comp = Math.random();
+
+	if(comp < 0.34){
+		comp='gajah';
+	}else if(comp >= 0.34 && comp < 0.67 ){
+		comp='orang';
+	}else{
+		comp='semut';
+	}
+	var hasil = '';
+
+		if (d == comp) {
+			hasil='SERI!';
+		}else if (d == 'gajah'){
+			hasil = (comp == 'orang') ? 'MENANG!' : 'KALAH!';
+		}else if (d == 'orang') {
+			hasil= (comp == 'gajah') ? 'KALAH!' : 'MENANG!';
+		}else if(d == 'semut'){
+			hasil = (comp == 'orang' ) ? 'KALAH!' : 'MENANG!';
+		}else{
+			alert('itu bukan pilihan');
+		}
+		//tampilkan hasilnya
+		alert('kamu memilih: ' + d + ' dan Cassy memilih: ' + comp + '\n maka hasilnya : kamu '+ hasil);
+
+		tanya=confirm('Mau lagi?');
+}  
+alert('Selamat Tinggal'); 
+</script>
+</body>
+</html>

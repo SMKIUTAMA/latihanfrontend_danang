@@ -30,6 +30,34 @@
 	}
 	var coba=plus(5,6,7,8);
 		console.log(coba);
+//rekursif
+function cetakAngka(n){
+	if (n === 0) return;
+	console.log(n);
+	return cetakAngka (n-1);
+}
+cetakAngka(10);
+// function Experssion VS Declaration
+			//function deklarasi
+			function deklarasi(a){
+				if (a % 2 == 0) {
+					alert(a + ' adalah bilangan genap');
+				}else{
+					alert( a + ' adalah bilangan ganjil');
+				}
+			}
+			deklarasi(prompt('masukan angka'));
+			//function ekspresi
+			var Experssion = function(a){
+				if (a % 2 == 0) {
+					alert(a + ' adalah bilangan genap');
+				}else{
+					alert( a + ' adalah bilangan ganjil');
+				}
+			}
+			Experssion(prompt('masukan nilai'));
+
+
 </script>
 </body>
 </html>

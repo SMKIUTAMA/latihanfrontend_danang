@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java script | function</title>
+</head>
+<body>
+<script type="text/javascript">
+	function jumlahvolume(a,b){
+		
+	return a * a * a + b * b * b ;
+	}
+	alert(jumlahvolume(1,1));
+	alert(jumlahvolume(45,1));
+	//para meter dan argumen
+	function tambah (a,b){
+		return a + b;
+	}
+	var a = parseInt(prompt('masukan nilai 1 :'));
+	var b = parseInt(prompt('masukan nilai 2 :'));
+
+	var hasil=tambah(a,b);
+	alert('hasilnya adalah ' + hasil)
+	//belajar arguments
+	function plus(){
+		var hasil=0;
+		for(var i = 0; i < arguments.length; i++){
+			hasil += arguments[i];
+		}
+		return hasil;
+	}
+	var coba=plus(5,6,7,8);
+		console.log(coba);
+</script>
+</body>
+</html>

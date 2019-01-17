@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function cekprima(n){
+			var maxx = Math.sqrt(n);
+			for( var i = 2; i <= maxx ; i++ ){
+				if (n % i == 0)
+					return false;
+				}
+				return true;
+			}
+			for( var n = 2 ; n < 100 ; n++){
+				if (cekprima(n)) {
+					document.write(n+ ' adalah bilangan prima' + "<br>");
+				}
+			}
+	</script>
+</body>
+</html>

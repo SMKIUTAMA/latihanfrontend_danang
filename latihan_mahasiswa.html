@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+    var ulangidong = true;
+
+    while (ulangidong){
+	var nama =prompt('nama mahasiswa');
+	var a = prompt('nilai Absen\n 0- 100');
+	var b = prompt('nilai Tugas\n 0- 100');
+	var c = prompt('nilai UTS\n 0- 100');
+	var d = prompt('nilai UAS\n 0- 100');
+function persentase(){
+	
+
+	 return   0.1 * a + 0.2 * b +  0.3 * c + 0.4 * d ;
+
+}
+	if (persentase() >=80 && persentase() <= 100 ) {
+		alert( 'Nama Siswa : '+nama+'\n Nilai Absen = '+a+ '\n Nilai tugas = '+b+ '\n Nilai UTS = '+c+ '\n Nilai UAS = '+d+'\n nilai anda = ' + persentase()+'\n Anda mendapatkan A');
+
+	}else if(persentase() >=70 && persentase() <= 79){
+		alert('Nama Siswa : '+nama+' Nilai Absen = '+a+ '\n Nilai tugas = '+b+ '\n Nilai UTS = '+c+ '\n Nilai UAS = '+d+'\n nilai anda = ' + persentase()+ '\n Anda mendapat nilai B');
+
+	}else if(persentase() >= 60 && persentase() <= 69) {
+		alert('Nama Siswa : '+nama+' Nilai Absen = '+a+ '\n Nilai tugas = '+b+ '\n Nilai UTS = '+c+ '\n Nilai UAS = '+d+'\n nilai anda = ' + persentase()+'\n  Anda mendapat nilai C');
+
+	}else if(persentase() >=59 && persentase() <= 50){
+		alert('Nama Siswa : '+nama+' Nilai Absen = '+a+ '\n Nilai tugas = '+b+ '\n Nilai UTS = '+c+ '\n Nilai UAS = '+d+'\n nilai anda = ' + persentase()+'\n Anda mendapat nilai D');
+
+	}else{
+		alert('Nama Siswa : '+nama+' Nilai Absen = '+a+ '\n Nilai tugas = '+b+ '\n Nilai UTS = '+c+ '\n Nilai UAS = '+d+'\n nilai anda = ' + persentase()+'\n Anda mendapatkan nilai E');
+		
+	}
+
+	ulangidong = confirm("Masukan Nilai Lagi");
+
+}
+
+alert("Terimakasih byee :*");
+
+
+</script>
+</body>
+</html>

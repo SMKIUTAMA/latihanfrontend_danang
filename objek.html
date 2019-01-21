@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java script|objek</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//literal
+		var wer ={
+			Nama : "Danang tri saputra",
+			Jabatan : "frontend",
+			Perusahan: "DAT's Intenational IT consult",
+			Alamat:"JL.cilobak 5 no 98 ",
+			Alamat_Perusahaan : "Magelang Yogyakarta",
+		}
+		//function decleration
+		function wer2(Nama, Jabatan, Perusahan, Alamat, Alamat_Perusahaan){
+			var e ={nama:"Form Daftar karyawan"};
+			console.log(this)
+			e.Nama = Nama;
+			e.Jabatan = Jabatan;
+			e.Perusahan = Perusahan;
+			e.Alamat = Alamat;
+			e.Alamat_Perusahaan = Alamat_Perusahaan;
+			return e;
+		}
+		var pegawai = wer2();
+		//construction
+		function Wer3 (Nama, Jabatan, Perusahan, Alamat, Alamat_Perusahaan){
+			this.Nama=Nama;
+			this.Jabatan=Jabatan;
+			this.Perusahan=Perusahan;
+			this.Alamat=Alamat;
+			this.Alamat_Perusahaan=Alamat_Perusahaan;
+		}
+		var e = new Wer3();
+
+		//belajar konsep this
+		function hai(){
+
+		}
+	</script>
+</body>
+</html>

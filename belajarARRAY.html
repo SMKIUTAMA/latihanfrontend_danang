@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<script type="text/javascript">
+		// cara menambahkan variabel ke array
+		var arr = ["danang"," tri","saputro","ganteng" ,"banget"," sumpah"];
+		//menghapus array dengan manual way
+		arr[5] = undefined;
+		// cara menampilkan isi array dalam bentuk bukan objek
+		for(var i = 0; i < arr.length; i++ ){
+			console.log('Mahasiswa ke- '+i+' : ' + arr[i]);
+		} 
+
+		//method pada array
+		 var arr = ['danang','abdul','wahyu','kevin','septiana','kami',' pasti'];
+		 //method push untuk menambahkan isi ke array dari belakang
+		 arr.push('menang','bisa','burhan');
+		 //menghapus isi array
+		 arr.pop('bisa');
+		 //menambahkan isi kearray dari depan
+		 arr.unshift('YEAY','PT.AMANAH UMROH HANDAL');
+		 //menghapus dari depan 
+		 arr.shift(); 
+		 //menambat/ menyambungkan diantara isi array menambahkan isi array dari tengah
+		 arr.splice(1, 0, 'STAR UP TERDEPAN AKAN DATANG')
+		 //menghapus isi array dari tengah
+		 var arr2 = arr.slice(0,10);
+		 
+		 console.log(arr.join(' '));
+		 console.log(arr2.join(' '));
+		</script>
+</body>
+</html>

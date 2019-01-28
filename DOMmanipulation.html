@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java script | DOM manipulation</title>
+	<style type="text/css">
+		*{
+			border:2px solid #dede;
+			padding: 15px;
+			margin: 15px;
+		}
+		html{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			max-width: 600px;
+			margin: 30px auto;
+			font-family: sans-serif;
+			color: #333;
+		}
+		.biru-muda{background-color:lightblue; }
+
+	</style>
+</head>
+<body>
+	<h1 id="Judul">Hallo javascript DOM </h1>
+	<div id="container">
+		<section id="a">
+			<p class="p1">paragraf 1</p>
+			<a href="www.google.com">search SOMETHING?</a>
+			<p class="p2">paragraf 2</p>
+			<p class="p3">Paragraf 3</p>
+		</section>
+			<section id="b">
+				<p class="p4">Paragraf 4</p>
+				<ul>
+					<li>Danang</li>
+					<li>Wahyu</li>
+					<li>Kevin</li>
+					<li>abdulloh</li>
+					<li>septiana</li>
+				</ul>
+			</section>		
+	</div>
+	<script type="text/javascript">
+		//membuat element baru dengan DOM
+	 const pbaru = document.createElement('p');
+	 	//membuat node baru menggunakan DOM
+	 const isibaru = document.createTextNode('Ini Paragraf Baru');
+	 //menyatukan element dengan node
+	 pbaru.appendChild(isibaru);
+	 //memangggil section
+	 const A = document.getElementById('a');
+	 //meletakan element baru di element sebelumnbya menggunakan node.appendChild() 
+	 A.appendChild(pbaru);
+	 // meletakan element baru menggunakan  node.insertBefore
+	 const libaru = document.createElement('li');
+	 const tulisan = document.createTextNode('Mia');
+	 libaru.appendChild(tulisan);
+	 const ul = document.querySelector('section#b ul');
+	 const li = ul.querySelector('section#b ul li:nth-child(2)');
+	 ul.insertBefore(libaru, li);
+
+	 // meremove element dengan node.romoveChild
+
+	 const link = document.getElementsByTagName('a')[0];
+	 A.removeChild(link);
+
+	 //mengubah isi dan element dengan parentnode.replaceChild
+	 const B = document.getElementById('b');
+	 const p4 = B.getElementsByTagName('p')[0];
+	 const h2baru = document.createElement('h2');
+	 const judulbaru = document.createTextNode('anggota IT consult');
+	 h2baru.appendChild(judulbaru);
+	 //mereplace dengan parentnode.replaceChild()
+	 B.replaceChild(h2baru, p4);		
+	</script>
+</body>
+</html>

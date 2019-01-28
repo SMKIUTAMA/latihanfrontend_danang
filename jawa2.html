@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>suit jawa versi 2</title>
+    <link rel="stylesheet" type="text/css" href="suit.css">
+</head>
+<body>
+    <h1>Suwit Jawa v2.0</h1>
+
+    <div class="container">
+        <div class="area-komputer">
+            <img src="img/gajah.jpg" class="img-komputer">
+            <p class="cassy">gajah</p>
+        </div>
+        <div class="info"></div>
+        <div class="area-player">
+            <ul>
+                <li>
+                    <img src="img/gajah.jpg" class="gajah">
+                    <p>Gajah</p>
+                </li>
+                <li>
+                    <img src="img/orang.jpg" class="orang">
+                    <p>Orang</p>
+                </li>
+                <li>
+                    <img src="img/semut.jpg" class="semut">
+                    <p>Semut</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function pilihanCassy(){
+            var comp = Math.random();
+                    if(comp < 0.34)  return 'gajah';
+                    if(comp >= 0.34 && comp < 0.67 ) return 'orang';
+                    return 'semut';
+                }
+        function getHasil(comp, player){
+                if (player == comp) return'SERI!';
+                if (player == 'gajah') return (comp == 'orang') ? 'MENANG!' : 'KALAH!';
+                if (player == 'orang') return (comp == 'gajah') ? 'KALAH!' : 'MENANG!';
+                if(player == 'semut') return (comp == 'orang' ) ? 'KALAH!' : 'MENANG!';
+            }
+            function acak(
+
+                ){
+                const gambar = document.querySelector('.img-komputer');
+                const img = ['gajah','semut','orang'];
+                let i = 0;
+                const mulai = new Date().getTime();
+                setInterval(function(){
+                    if(new Date().getTime() - mulai > 1000) {
+                        clearInterval;
+                         return;}
+                    gambar.setAttribute('src','img/'+img[i++]+ '.jpg');
+                    if(i == img.length) {
+                        i = 0;
+                    }
+                }, 100);
+            }
+
+         const pilihan = document.querySelectorAll('li img');
+            pilihan.forEach(function(lip){
+                lip.addEventListener('click', function(){
+                    const pilihKomputer = pilihanCassy();
+                const pilihanPlayer = lip.className;
+                const hasil = getHasil(pilihKomputer, pilihanPlayer);
+
+                acak();
+                setTimeout(function(){
+                        const imgcomputer = document.querySelector('.img-komputer');
+                            imgcomputer.setAttribute('src','img/' + pilihKomputer +'.jpg');
+                        const pilih = document.querySelector('.cassy');
+                            pilih.innerHTML = pilihKomputer;
+                        const info = document.querySelector('.info');
+                            info.innerHTML= hasil;
+                        
+                }, 1000);
+
+            });
+                
+            });   
+    </script>
+</body>
+</html>

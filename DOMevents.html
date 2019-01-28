@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java script | DOM manipulation</title>
+	<style type="text/css">
+		*{
+			border:2px solid #dede;
+			padding: 15px;
+			margin: 15px;
+		}
+		html{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			max-width: 600px;
+			margin: 30px auto;
+			font-family: sans-serif;
+			color: #333;
+		}
+		.biru-muda{background-color:lightblue; }
+
+	</style>
+</head>
+<body>
+	<h1 id="Judul">Hallo javascript DOM </h1>
+	<div id="container">
+		<section id="a">
+			<p class="p1" onclick="hover1()" >paragraf 1</p>
+			<a href="www.google.com">search SOMETHING?</a>
+			<p class="p2">paragraf 2</p>
+			<p class="p3">Paragraf 3</p>
+		</section>
+			<section id="b">
+				<p class="p4">Paragraf 4</p>
+				<ul>
+					<li>Danang</li>
+					<li>Wahyu</li>
+					<li>Kevin</li>
+					<li>abdulloh</li>
+					<li>septiana</li>
+				</ul>
+			</section>		
+	</div>
+	<script type="text/javascript">
+		//events dengan handler
+	 const p1 = document.querySelector('.p1');
+
+	 function hover1(){
+	 	p1.style.backgroundColor='lightgreen';
+	 }
+	 	const p2 = document.querySelector('.p2');
+	  function hover2(){
+	 	p2.style.backgroundColor='lightgreen';
+	 }
+	 p2.onclick=hover2;
+	 //events dengan addEventListener
+	 const p4 = document.querySelector('section#b p')
+	 p4.addEventListener('click', function(){
+	 	const ul = document.querySelector('section#b ul');
+
+	 	const libaru = document.createElement('li');
+	 	const isili = document.createTextNode('anggota baru');
+
+	 	libaru.appendChild(isili);
+
+	 	ul.appendChild(libaru);
+	 	libaru.style.backgroundColor="lightblue"
+	 	libaru.style.color = "red"
+	 });
+
+	 //perebedaan diantaranya adalah kalo handler itu jika dikasih event lebih dari1 maka dia akan menimpah kalau addEventlistener akan menjalankan kedua eventnya
+
+	</script>
+</body>
+</html>
